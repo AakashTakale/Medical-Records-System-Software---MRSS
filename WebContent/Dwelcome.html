@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Welcome: Doctor</title>
+		<meta name="description" content="Welcome: Doctor" />
+		<meta name="keywords" content="horizontal menu, microsoft menu, drop-down menu, mega menu, javascript, jquery, simple menu" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="fonts/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/default1.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="modernizr.custom.js"></script>
+		<style type="text/css">
+		.copy {
+			text-align: center;
+			margin-top: 23em;
+			font-size: 15px;
+			padding: 2% 0;
+			}
+		.copy p a {
+			color:#D9155C;
+			font-size:13px;
+			}
+		.footer-top {
+			padding-top: 2%;
+			border-bottom: 1px solid #DADADA
+		}
+		.copy p a:hover {
+			color:#333;
+		}
+		</style>
+		<script>
+	function register_user1()
+	{
+	
+        window.alert("The record was Successfully added.");
+        document.location.href = "Dwelcome.jsp";
+    }
+	</script>
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<span>Welcome</span>
+				<h1>Doctor</h1>
+				<nav>
+					
+					<a href="logout.jsp" class="icon-arrow-left" data-info="Logout">Logout</a>
+				</nav>
+			</header>	
+			<div class="main">
+				<nav id="cbp-hrmenu" class="cbp-hrmenu">
+					<ul>
+						<li>
+							<a href="#">Search</a>
+							<div class="cbp-hrsub">
+								<div class="cbp-hrsub-inner"> 
+								<form name="admin" method="get" action="SearchServlet">
+									<div>
+									<h4>Search Patient</h4>
+										<ul>											
+											<li><label><font color="white">Enter SSN</font></label> <input type="text" placeholder="Enter SSN" required="" name="txtName"></li>
+											<li><input type="submit" name="txtSearch" value="Search"></li>
+											
+										</ul>
+									</div>
+									</form>
+								</div><!-- /cbp-hrsub-inner -->
+							</div><!-- /cbp-hrsub -->
+						</li>
+						<li>
+							<a href="#">Appointments</a>
+							<div class="cbp-hrsub">
+								<div class="cbp-hrsub-inner">
+									<div>	
+										<h4>Todays Appointments</h4>								
+										<form name="login" method="post" action="javacalender.jsp">
+										<ul>
+											<li><input type="submit" value="View Appointment" /></li>
+										</ul>		
+										</form>										
+									</div>
+									
+								</div><!-- /cbp-hrsub-inner -->
+							</div><!-- /cbp-hrsub -->
+						</li>
+						
+						<li>
+							<a href="#">Register Nurse</a>
+							<div class="cbp-hrsub">
+								<div class="cbp-hrsub-inner"> 
+								<form name="admin" action="nurseRegister.html">
+									<div>
+										<h4>Register new Nurse</h4>
+										<ul>											
+											<li><input type="submit" name="submit" value="Register"></li>
+										</ul>
+									</div>
+								</form>	
+								</div><!-- /cbp-hrsub-inner -->
+							</div><!-- /cbp-hrsub -->
+						</li>
+						<li>
+							<a href="#">Prescriptions</a>
+							<div class="cbp-hrsub">
+								<div class="cbp-hrsub-inner"> 
+								<form method="post" action="PrescServlet" onsubmit="return register_user1();">
+								<input type="hidden" name="pagename2" value="presc"/>	
+									<div>
+										<h4>Provide Prescriptions</h4>
+									<table border="0" width="35%" >
+           							 
+            						<tr>
+            					    <td><label><font color="white">First Name</font></label> </td>
+          					      <td><input type="text" name="fname" placeholder="Enter FirstName" required="" size="50"/></td>
+           						 </tr>
+         							  <tr>
+           							     <td><label><font color="white">Last Name</font></label> </td>
+           							     <td><input type="text" name="lname" placeholder="Enter LastName" required="" size="50"/></td>
+          							  </tr>
+         							   <tr>
+         							       <td><label><font color="white">Prescriptions</font></label> </td>
+         							       <td><textarea rows="10" cols="39" placeholder="Enter Content" required="" name="content"></textarea> </td>
+         							   </tr>
+         							   <tr>
+        							        <td colspan="2" align="center"><input type="submit" value="Save" onsubmit="return register_user1();"/></td>
+       							     </tr>
+       								 </table>
+									</div>
+								</form>	
+								</div><!-- /cbp-hrsub-inner -->
+							</div><!-- /cbp-hrsub -->
+						</li>
+						<li>
+							<a href="#">X-Ray Reports</a>
+							<div class="cbp-hrsub">
+								<div class="cbp-hrsub-inner"> 
+								<form action="ImgDownloadServlet" method="get" enctype="multipart/form-data">
+									<div>
+										<h4>Download Report</h4>
+								<table border="0">
+               						 <tr>
+                  				 	 <td><label><font color="white">First Name:</font></label> </td>
+               				    	 <td><input type="text" name="firstName" placeholder="Enter FirstName" required="" size="50"/></td>
+            			    		</tr>
+           						    <tr>
+           				        	 <td><label><font color="white">Last Name:</font></label></td>
+            			       		 <td><input type="text" name="lastName" placeholder="Enter LastName" required="" size="50"/></td>
+         				       		</tr>
+          		 		     		<tr>
+           		         			<td colspan="2">
+           	    	         			<input type="submit" value="View Report">
+           			         		</td>
+           			     			</tr>
+          			  			</table>
+									</div>
+								</form>	
+								</div><!-- /cbp-hrsub-inner -->
+							</div><!-- /cbp-hrsub -->
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<footer>
+			<div class="copy">
+				<p>Design by <a href="#">Dhaval<sup>&copy;</sup> Aakash<sup>&copy;</sup></a></p>
+			</div>
+			</footer>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="css/cbpHorizontalMenu.min.js"></script>
+		<script>
+			$(function() {
+				cbpHorizontalMenu.init();
+			});
+		</script>
+	</body>
+</html>
